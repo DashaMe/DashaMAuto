@@ -1,6 +1,5 @@
 package TopPackage.Pages;
 
-import TopPackage.Utils.Email.Email;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,12 +15,12 @@ public class CreateEmailPage extends BasePage {
     private WebElement emailBodyField;
 
     @FindBy(name = "send")
-    protected WebElement sendEmailButton;
+    private WebElement sendEmailButton;
 
-    public void composeEmail(Email email){
-        emailToField.sendKeys(email.getEmailTo());
-        emailSubjectField.sendKeys(email.getEmailSubject());
-        emailBodyField.sendKeys(email.getEmailBody());
+    protected void composeEmail(String emailTo, String emailSubject, String emailBody){
+        emailToField.sendKeys(emailTo);
+        emailSubjectField.sendKeys(emailSubject);
+        emailBodyField.sendKeys(emailBody);
     }
 
     public void sendEmail(){

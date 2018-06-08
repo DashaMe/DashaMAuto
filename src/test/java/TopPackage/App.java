@@ -1,14 +1,14 @@
 package TopPackage;
 
 import TopPackage.Helpers.*;
-import TopPackage.Pages.CreateEmailPage;
 
 public class App {
     public LoginHelper login;
     public DashboardHelper dashboard;
     public CommonHelper common;
     public HeaderHelper header;
-    public CreateEmailPage createEmail;
+    public CreateEmailHelper createEmail;
+    public ReceivedEmailPageHelper receivedEmail;
 
     public App() {
         this.login = new LoginHelper();
@@ -16,5 +16,6 @@ public class App {
         this.common = new CommonHelper();
         this.header = new HeaderHelper();
         this.createEmail = new CreateEmailHelper();
+        this.receivedEmail = new ReceivedEmailPageHelper();
     }
 }

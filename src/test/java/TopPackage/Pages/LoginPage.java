@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath ="//form[@name='lform']//input[@type='submit']")
 	private WebElement submit;
 
-	protected void login(String name,String pass){
+	protected void login(String name, String pass){
 		login.sendKeys(name);
 		password.sendKeys(pass);
 		submit.click();
